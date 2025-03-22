@@ -1,0 +1,101 @@
+"use client"
+
+import { motion } from "framer-motion"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+
+export default function About() {
+  return (
+    <div className="container mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2 className="text-3xl font-bold mb-2">About Me</h2>
+        <div className="w-20 h-1 bg-primary mb-8"></div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="md:col-span-2">
+            <p className="text-lg mb-6">
+              I'm a passionate Full-Stack Developer with 2 years of professional experience building web applications
+              and services. My journey in software development began during my computer science studies, and I've been
+              hooked ever since.
+            </p>
+
+            <p className="text-lg mb-6">
+              I specialize in building responsive, user-friendly applications using modern JavaScript frameworks like
+              React and Next.js, backed by robust server-side technologies. I'm committed to writing clean, maintainable
+              code and constantly learning new technologies.
+            </p>
+
+            <p className="text-lg mb-8">
+              When I'm not coding, you can find me hiking, reading tech blogs, or contributing to open-source projects.
+              I believe in continuous learning and sharing knowledge with the developer community.
+            </p>
+
+            <div className="flex flex-wrap gap-2 mb-8">
+              <Badge variant="outline" className="text-sm py-1">
+                Problem Solver
+              </Badge>
+              <Badge variant="outline" className="text-sm py-1">
+                Team Player
+              </Badge>
+              <Badge variant="outline" className="text-sm py-1">
+                Fast Learner
+              </Badge>
+              <Badge variant="outline" className="text-sm py-1">
+                Detail-Oriented
+              </Badge>
+              <Badge variant="outline" className="text-sm py-1">
+                Adaptable
+              </Badge>
+            </div>
+          </div>
+
+          <div>
+            <Card>
+              <CardContent className="pt-6">
+                <h3 className="text-xl font-semibold mb-4">Personal Info</h3>
+                <ul className="space-y-3">
+                  <li className="flex justify-between">
+                    <span className="text-muted-foreground">Name:</span>
+                    <span className="font-medium">Alex Johnson</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span className="text-muted-foreground">Location:</span>
+                    <span className="font-medium">San Francisco, CA</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span className="text-muted-foreground">Experience:</span>
+                    <span className="font-medium">2 Years</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span className="text-muted-foreground">Availability:</span>
+                    <span className="font-medium">Full-time</span>
+                  </li>
+                </ul>
+
+                <div className="mt-6 pt-6 border-t">
+                  <h3 className="text-xl font-semibold mb-4">Languages</h3>
+                  <ul className="space-y-3">
+                    <li className="flex justify-between">
+                      <span className="text-muted-foreground">English:</span>
+                      <span className="font-medium">Native</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span className="text-muted-foreground">Spanish:</span>
+                      <span className="font-medium">Intermediate</span>
+                    </li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  )
+}
+
