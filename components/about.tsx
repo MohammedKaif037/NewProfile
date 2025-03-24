@@ -31,7 +31,7 @@ export default function About() {
             </p>
 
             <p className="text-lg mb-8">
-              When I'm not coding, you can find me hiking, reading tech blogs, or contributing to open-source projects.
+              When I'm not coding, you can find me hiking, reading tech blogs, or going through tech news.
               I believe in continuous learning and sharing knowledge with the developer community.
             </p>
 
@@ -61,15 +61,15 @@ export default function About() {
                 <ul className="space-y-3">
                   <li className="flex justify-between">
                     <span className="text-muted-foreground">Name:</span>
-                    <span className="font-medium">Alex Johnson</span>
+                    <span className="font-medium">Mohammed Kaif</span>
                   </li>
                   <li className="flex justify-between">
                     <span className="text-muted-foreground">Location:</span>
-                    <span className="font-medium">San Francisco, CA</span>
+                    <span className="font-medium">Bangalore, IN</span>
                   </li>
                   <li className="flex justify-between">
                     <span className="text-muted-foreground">Experience:</span>
-                    <span className="font-medium">2 Years</span>
+                    <span className="font-medium">2.5 Years</span>
                   </li>
                   <li className="flex justify-between">
                     <span className="text-muted-foreground">Availability:</span>
@@ -82,11 +82,19 @@ export default function About() {
                   <ul className="space-y-3">
                     <li className="flex justify-between">
                       <span className="text-muted-foreground">English:</span>
+                      <span className="font-medium">Proficient</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span className="text-muted-foreground">Hindi:</span>
                       <span className="font-medium">Native</span>
                     </li>
                     <li className="flex justify-between">
-                      <span className="text-muted-foreground">Spanish:</span>
-                      <span className="font-medium">Intermediate</span>
+                      <span className="text-muted-foreground">Kannada:</span>
+                      <span className="font-medium">Native</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span className="text-muted-foreground">Telugu:</span>
+                      <span className="font-medium">Speak</span>
                     </li>
                   </ul>
                 </div>
