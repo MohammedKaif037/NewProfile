@@ -30,124 +30,52 @@ export default function Projects() {
   const projects: Project[] = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce platform with payment integration and admin dashboard.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      longDescription:
-        "A comprehensive e-commerce solution built with the MERN stack. Features include product catalog, user authentication, shopping cart, payment processing with Stripe, and an admin dashboard for inventory management.",
-      challenges:
-        "Implementing real-time inventory updates, secure payment processing, and optimizing performance for mobile devices.",
-      solutions:
-        "Used WebSockets for real-time updates, implemented Stripe's secure checkout, and adopted a mobile-first design approach with responsive components.",
-      technologies: ["React", "Redux", "Node.js", "Express", "MongoDB", "Stripe API", "JWT", "AWS S3"],
+      title: "SnippetVault",
+      description: "A modern code snippet manager built with Next.js and Supabase.",
+      image: "/public/logo.svg",
+      tags: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
+      github: "https://github.com/yourusername/snippet-vault",
+      demo: "https://snippet-vault.vercel.app",
+      longDescription: 
+        "SnippetVault is a feature-rich code snippet manager designed to help developers efficiently store, organize, and retrieve their code snippets. It offers a seamless user experience with advanced features like tag-based organization, powerful search capabilities, and light/dark mode support. The platform supports user authentication, allowing users to securely manage their snippets, mark favorites, archive old snippets, and sync data across devices. With its intuitive interface and robust functionality, SnippetVault caters to both casual coders and professional developers. The application also includes guest mode for users who want to try the platform without creating an account. Built using Next.js, TypeScript, and Supabase, SnippetVault ensures scalability, security, and ease of use.",
+      challenges: 
+        "Implementing real-time syncing across devices, optimizing search performance for large datasets, and ensuring secure storage of private snippets.",
+      solutions: 
+        "Leveraged Supabase's real-time database capabilities for syncing, implemented efficient indexing and filtering for search, and used Supabase Auth for secure user authentication and data privacy.",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Zustand", "Monaco Editor", "Prism"]
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Next.js", "TypeScript", "Firebase", "Tailwind"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      longDescription:
-        "A task management application that allows teams to collaborate on projects in real-time. Features include task creation, assignment, status tracking, comments, and notifications.",
-      challenges: "Managing real-time updates across multiple users and ensuring data consistency.",
-      solutions:
-        "Leveraged Firebase Realtime Database for synchronization and implemented optimistic UI updates for a responsive feel.",
-      technologies: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS", "React Query", "React DnD"],
+      title: "CodePulse",
+      description: "An AI-powered coding habit tracker to help developers build consistent coding habits.",
+      image: "/placeholder.svg?height=200&width=200",
+      tags: ["Next.js", "Supabase", "AI", "Tailwind CSS"],
+      github: "https://github.com/yourusername/codepulse",
+      demo: "https://codepulse-demo.vercel.app",
+      longDescription: 
+        "CodePulse is an innovative platform designed to help developers track their coding habits, monitor progress, and receive personalized guidance to improve their skills. The platform integrates AI-powered features such as a chat assistant, daily coding challenges, and personalized learning recommendations. Users can track their coding activity, view streak calendars, and analyze their progress through detailed charts and gamified XP systems. The onboarding process collects user preferences and goals, tailoring the experience to individual needs. CodePulse also includes task and project management tools, allowing users to organize their coding work effectively. With its sleek design and advanced functionality, CodePulse empowers developers to stay motivated and continuously grow their skills.",
+      challenges: 
+        "Integrating AI-driven insights, ensuring accurate tracking of coding activity, and designing a user-friendly interface for complex features.",
+      solutions: 
+        "Used the ChatAnywhere API for AI integration, implemented robust activity tracking with Supabase, and adopted a clean, intuitive UI design using shadcn/ui components.",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "ChatAnywhere API", "Vercel"]
     },
+    
     {
       id: 3,
-      title: "Weather Dashboard",
-      description: "A weather application with location-based forecasts and interactive maps.",
+      title: "VibeCart",
+      description: "A mood-based e-commerce platform that recommends products tailored to how you're feeling.",
       image: "/placeholder.svg?height=400&width=600",
-      tags: ["React", "OpenWeather API", "Mapbox", "CSS"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      longDescription:
-        "A weather dashboard that provides current conditions and forecasts based on user location or search. Includes interactive maps, hourly and daily forecasts, and weather alerts.",
-      challenges: "Handling API rate limits and displaying complex weather data in an intuitive way.",
-      solutions:
-        "Implemented caching strategies to reduce API calls and designed custom visualizations for weather data.",
-      technologies: ["React", "OpenWeather API", "Mapbox GL", "Chart.js", "Geolocation API"],
-    },
-    {
-      id: 4,
-      title: "Fitness Tracker",
-      description: "A mobile-responsive fitness tracking application with progress visualization.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["React Native", "GraphQL", "MongoDB", "D3.js"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      longDescription:
-        "A fitness tracking application that allows users to log workouts, track progress, set goals, and visualize improvements over time with interactive charts.",
-      challenges: "Creating an intuitive mobile experience and generating meaningful visualizations from workout data.",
-      solutions:
-        "Used React Native for a native-like experience and implemented D3.js for custom, interactive data visualizations.",
-      technologies: ["React Native", "GraphQL", "Apollo Client", "MongoDB", "D3.js", "JWT"],
-    },
-    {
-      id: 5,
-      title: "Recipe Sharing Platform",
-      description: "A social platform for sharing and discovering recipes with user interactions.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Vue.js", "Django", "PostgreSQL", "AWS"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      longDescription:
-        "A recipe sharing platform where users can discover, share, and save recipes. Features include user profiles, recipe ratings, comments, and personalized recommendations.",
-      challenges: "Building a recommendation system and handling image uploads efficiently.",
-      solutions:
-        "Implemented a collaborative filtering algorithm for recommendations and used AWS S3 for scalable image storage.",
-      technologies: ["Vue.js", "Vuex", "Django", "Django REST Framework", "PostgreSQL", "AWS S3", "Elasticsearch"],
-    },
-    {
-      id: 6,
-      title: "Real Estate Listing App",
-      description: "A property listing application with map integration and filtering options.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["React", "Node.js", "Google Maps API", "MongoDB"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      longDescription:
-        "A real estate listing application that allows users to search for properties with various filters, view property details, and contact agents. Includes map integration for location-based searches.",
-      challenges: "Implementing complex search filters and optimizing map performance with many markers.",
-      solutions:
-        "Used MongoDB geospatial queries for efficient location-based searches and implemented marker clustering for map performance.",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Google Maps API", "Cloudinary", "JWT"],
-    },
-    {
-      id: 7,
-      title: "Budget Tracker",
-      description: "A personal finance application for tracking expenses and income.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["React", "Firebase", "Chart.js", "Tailwind"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      longDescription:
-        "A personal finance application that helps users track income, expenses, and savings goals. Features include transaction categorization, budget setting, and visual reports of spending patterns.",
-      challenges: "Creating intuitive data visualization and implementing secure financial data storage.",
-      solutions:
-        "Used Chart.js for interactive financial reports and Firebase with strict security rules for data protection.",
-      technologies: ["React", "Firebase", "Chart.js", "Tailwind CSS", "React Hook Form"],
-    },
-    {
-      id: 8,
-      title: "Learning Management System",
-      description: "An educational platform for course creation and student progress tracking.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Next.js", "Node.js", "PostgreSQL", "AWS"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      longDescription:
-        "A learning management system that allows instructors to create courses, upload materials, and track student progress. Students can enroll in courses, complete assignments, and receive feedback.",
-      challenges: "Managing course content delivery and implementing a flexible assessment system.",
-      solutions:
-        "Used AWS S3 for content storage and developed a modular assessment framework that supports various question types.",
-      technologies: ["Next.js", "Node.js", "Express", "PostgreSQL", "AWS S3", "Socket.io", "JWT"],
+      tags: ["Next.js", "Supabase", "AI", "Tailwind CSS"],
+      github: "https://github.com/yourusername/vibecart",
+      demo: "https://vibecart-demo.vercel.app",
+      longDescription: 
+        "VibeCart is a cutting-edge e-commerce platform that revolutionizes the shopping experience by aligning product recommendations with the user's current mood. Using AI-powered mood detection (via facial expressions or interactive quizzes), VibeCart curates personalized product suggestions that enhance or complement the user's emotional state. The platform includes advanced features like mood analytics, product reviews with emoji reactions, and a 3D/AR product viewer. Users can manage their shopping carts, track orders, generate invoices, and even subscribe to receive mood-based products regularly. With a fully responsive design, VibeCart ensures a seamless shopping experience across desktops, tablets, and mobile devices. The platform combines the power of AI, e-commerce, and modern web technologies to create a truly unique and engaging shopping journey.",
+      challenges: 
+        "Developing accurate mood detection algorithms, integrating multiple APIs for AR/3D viewing, and ensuring smooth performance across devices.",
+      solutions: 
+        "Used computer vision libraries for mood detection, integrated third-party AR/3D tools, and optimized the frontend with lazy loading and efficient state management using Zustand.",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Framer Motion", "Zustand", "Nodemailer", "PDFKit"]
     },
   ]
 

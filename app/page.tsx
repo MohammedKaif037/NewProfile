@@ -44,9 +44,9 @@ export default function Home() {
           <Education />
         </section>
 
-        <section id="testimonials" className="py-16">
+        {/* <section id="testimonials" className="py-16">
           <Testimonials />
-        </section>
+        </section> */}
 
         <section id="contact" className="py-16">
           <Contact />

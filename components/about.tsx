@@ -19,15 +19,11 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-2">
             <p className="text-lg mb-6">
-              I'm a passionate Full-Stack Developer with 2 years of professional experience building web applications
-              and services. My journey in software development began during my computer science studies, and I've been
-              hooked ever since.
+            I'm a dedicated Full-Stack Java Developer with over 2 years of experience in building web applications and backend services. My software development journey started during my computer science studies, and it has evolved into a strong passion for creating scalable, efficient solutions.
             </p>
 
             <p className="text-lg mb-6">
-              I specialize in building responsive, user-friendly applications using modern JavaScript frameworks like
-              React and Next.js, backed by robust server-side technologies. I'm committed to writing clean, maintainable
-              code and constantly learning new technologies.
+            I specialize in building scalable, high-performance applications using Java and Spring Boot, complemented by modern JavaScript frameworks like React and Next.js. With a strong focus on backend development, I am committed to writing clean, maintainable code and continually expanding my expertise in emerging technologies.
             </p>
 
             <p className="text-lg mb-8">

@@ -10,43 +10,30 @@ export default function Resume() {
   const workExperience = [
     {
       id: 1,
-      title: "Full-Stack Developer",
-      company: "TechSolutions Inc.",
-      location: "San Francisco, CA",
-      period: "Jan 2023 - Present",
+      title: "Java Developer",
+      company: "AIROBOSOFT Products and Services LLP",
+      location: "Remote",
+      period: "Nov 2022 - Mar 2025",
       description: [
-        "Developed and maintained multiple client-facing web applications using React, Next.js, and Node.js.",
-        "Implemented RESTful APIs and GraphQL endpoints for frontend consumption.",
-        "Collaborated with UX/UI designers to implement responsive designs and improve user experience.",
-        "Participated in code reviews and mentored junior developers.",
-        "Reduced application load time by 40% through code optimization and implementing lazy loading.",
+        "Developed and optimized RESTful APIs using Spring Boot, enhancing performance by 25%.",
+        "Implemented Microservices Architecture with Spring Boot and Docker.",
+        "Managed CI/CD pipelines using Jenkins and reduced production downtime by 40%.",
+        "Used Cassandra for NoSQL data storage and wrote unit tests with JUnit and Mockito.",
+        "Worked in Agile/Scrum environment with cross-functional teams."
       ],
     },
     {
       id: 2,
-      title: "Frontend Developer",
-      company: "WebCraft Studios",
-      location: "Remote",
-      period: "Jun 2021 - Dec 2022",
-      description: [
-        "Built responsive web applications using React and TypeScript.",
-        "Worked with REST APIs to fetch and display data.",
-        "Implemented state management using Redux and Context API.",
-        "Collaborated with backend developers to design and implement API endpoints.",
-        "Participated in daily stand-ups and sprint planning in an Agile environment.",
-      ],
-    },
-    {
-      id: 3,
       title: "Web Development Intern",
-      company: "InnovateTech",
-      location: "Boston, MA",
-      period: "Jan 2021 - May 2021",
+      company: "10Seconds Company",
+      location: "Remote",
+      period: "Aug 2022 - Sep 2022",
       description: [
-        "Assisted in developing and maintaining company websites using HTML, CSS, and JavaScript.",
-        "Learned and applied React fundamentals to small projects.",
-        "Fixed bugs and implemented minor features under supervision.",
-        "Participated in team meetings and gained exposure to professional development workflows.",
+        "Worked on building web applications using Django framework with Python backend.",
+        "Created models and views, and used MySQL for data storage and queries.",
+        "Developed user authentication and basic CRUD features for internal applications.",
+        "Improved frontend responsiveness with Bootstrap and ensured smooth backend integration.",
+        "Gained hands-on experience in deploying Django apps and working in version-controlled environments using Git."
       ],
     },
   ]
@@ -54,27 +41,83 @@ export default function Resume() {
   const certifications = [
     {
       id: 1,
-      title: "AWS Certified Developer - Associate",
-      organization: "Amazon Web Services",
-      date: "Dec 2022",
-      description: "Validated expertise in developing, deploying, and debugging cloud-based applications using AWS.",
+      title: "AWS Educate Introduction to Cloud 101",
+      organization: "Amazon Web Services (AWS)",
+      date: "Mar 2025",
+      description: "Fundamentals of cloud computing including services, infrastructure, and global infrastructure overview.",
     },
     {
       id: 2,
-      title: "Professional Scrum Master I (PSM I)",
-      organization: "Scrum.org",
-      date: "Aug 2022",
-      description: "Demonstrated understanding of Scrum framework and ability to apply it in real-world scenarios.",
+      title: "Career Essentials in Generative AI",
+      organization: "Microsoft and LinkedIn",
+      date: "May 2024",
+      description: "Covered topics like Generative AI, AI Ethics, and its practical applications in the modern workplace.",
     },
     {
       id: 3,
-      title: "MongoDB Certified Developer",
-      organization: "MongoDB University",
-      date: "Mar 2022",
-      description:
-        "Validated skills in building applications using MongoDB, including data modeling, querying, and indexing.",
+      title: "Python Essentials 2",
+      organization: "Cisco",
+      date: "Sep 2023",
+      description: "Advanced Python topics including OOP, exceptions, file handling, and pip usage.",
     },
-  ]
+    {
+      id: 4,
+      title: "Python Essentials 1",
+      organization: "Cisco",
+      date: "Aug 2023",
+      description: "Basic Python concepts such as variables, conditionals, loops, and analytical problem solving.",
+    },
+    {
+      id: 5,
+      title: "CPA: Programming in C++",
+      organization: "C++ Institute",
+      date: "Oct 2022",
+      description: "Validated knowledge of C++ programming including syntax, OOP, and standard libraries.",
+    },
+    {
+      id: 6,
+      title: "AI Appreciate Badge - AI For All",
+      organization: "CBSE and Intel",
+      date: "Sep 2022",
+      description: "Recognized for foundational understanding of Artificial Intelligence and its ethical use.",
+    },
+    {
+      id: 7,
+      title: "C++ Data Structures and Algorithms",
+      organization: "DevTown",
+      date: "Sep 2022",
+      description: "Learned core data structures and algorithm techniques using C++.",
+    },
+    {
+      id: 8,
+      title: "Introduction to Digital Transformation with Google Cloud",
+      organization: "Coursera",
+      date: "Jul 2022",
+      description: "Explored cloud digital transformation and key business enablers using Google Cloud.",
+    },
+    {
+      id: 9,
+      title: "Python 3 Ultimate Guide 2022",
+      organization: "Udemy",
+      date: "Jun 2022",
+      description: "Comprehensive course covering Python basics to advanced topics including file I/O, modules, and error handling.",
+    },
+    {
+      id: 10,
+      title: "Artificial Intelligence",
+      organization: "DevTown",
+      date: "Sep 2022",
+      description: "Covered core AI concepts and introductory machine learning principles.",
+    },
+    {
+      id: 11,
+      title: "Prompt Engineering Guide",
+      organization: "Udemy",
+      date: "Aug 2022",
+      description: "Learned techniques for effective prompt crafting for AI and LLM-based applications.",
+    },
+  ];
+  
 
   return (
     <div className="container mx-auto">

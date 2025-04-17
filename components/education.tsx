@@ -8,32 +8,47 @@ export default function Education() {
   const education = [
     {
       id: 1,
-      degree: "Bachelor of Science in Computer Science",
-      institution: "University of California, Berkeley",
-      location: "Berkeley, CA",
-      period: "2017 - 2021",
-      description:
-        "Graduated with honors. Focused on software engineering, web development, and database systems. Participated in hackathons and coding competitions.",
+      degree: "Bachelor of Engineering (B.E.) in Information Science and Engineering",
+      institution: "VTU",
+      location: "Karnataka",
+      period: "2019 - 2023",
+      description: "Graduated with a CGPA of 8.29. Studied core subjects including data structures, algorithms, database systems, and software engineering.",
       achievements: [
-        "Dean's List: 2018-2021",
-        "Senior Project: Developed a real-time collaborative coding platform",
-        "Teaching Assistant for Introduction to Web Development",
+        "Completed final year project based on a real-time stock market solution.",
+        "Actively participated in tech fests and coding competitions.",
+        "Member of the college development club."
       ],
     },
     {
       id: 2,
-      degree: "Full-Stack Web Development Bootcamp",
-      institution: "Tech Academy",
-      location: "San Francisco, CA",
-      period: "Jan 2021 - Apr 2021",
-      description:
-        "Intensive 12-week program focused on modern web development technologies and practices. Built multiple full-stack applications using the MERN stack.",
+      degree: "Pre-University Course (PUC) in PCMB",
+      institution: "Williams International PU College",
+      location: "Bangalore, Karnataka",
+      period: "2017 - 2019",
+      description: "Studied Physics, Chemistry, Mathematics, and Biology (PCMB).",
       achievements: [
-        "Capstone Project: E-commerce platform with payment integration",
-        "Recognized for Best Team Project",
+        "Star Student Award",
+        "Science Fest Award",
+        "Good at Academics Award"
       ],
     },
-  ]
+    {
+      id: 3,
+      degree: "Webinars & Online Sessions",
+      institution: "CIET",
+      location: "Remote",
+      period: "2022 - 2023",
+      description: "Attended webinars to enhance knowledge in cutting-edge technologies and soft skills.",
+      achievements: [
+        "5G Communication – Explored future trends and impact on industries",
+        "Photonic Quantum Computers – Introduction to quantum optics and computation",
+        "Value of Soft Skills – Insights into workplace communication and personal development",
+        "National Educational Policy – Understanding reforms in India’s education landscape",
+        "Augmented & Virtual Reality – Learning about immersive technologies and applications"
+      ],
+    },
+  ];
+  
 
   const courses = [
     "Advanced JavaScript Concepts",

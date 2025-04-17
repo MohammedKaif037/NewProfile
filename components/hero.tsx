@@ -19,12 +19,11 @@ export default function Hero() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
-            Hi, I'm <span className="text-primary">Alex Johnson</span>
+            Hi, I'm <span className="text-primary">Mohammed kaif</span>
           </h1>
-          <h2 className="text-2xl sm:text-3xl font-medium text-muted-foreground mb-6">Full-Stack Developer</h2>
+          <h2 className="text-2xl sm:text-3xl font-medium text-muted-foreground mb-6">Full-Stack Java Developer</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-md">
-            I build responsive web applications with modern technologies. Specializing in React, Node.js, and cloud
-            solutions with 2 years of professional experience.
+          I build scalable web applications with a focus on Java, Spring Boot, and cloud solutions. With 2+ years of experience, I also work with React and Node.js to deliver full-stack solutions.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-8">
@@ -40,13 +39,13 @@ export default function Hero() {
 
           <div className="flex space-x-4">
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/MohammedKaif037" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/mohammed-kaif-a7793923a/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </a>
@@ -69,7 +68,7 @@ export default function Hero() {
           <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-primary/20">
             <img
               src="/placeholder.svg?height=320&width=320"
-              alt="Alex Johnson"
+              alt="Mohammed Kaif"
               className="object-cover w-full h-full"
             />
           </div>
@@ -84,7 +83,7 @@ export default function Hero() {
       >
         <p className="text-muted-foreground mb-4">Currently working with</p>
         <div className="flex flex-wrap justify-center gap-8">
-          {["React", "Node.js", "TypeScript", "AWS", "MongoDB"].map((tech) => (
+          {["Java", "Spring Boot", "Hibernate", "RESTful APIs", "MySQL", "PostgreSQL", "AWS (EC2, S3)", "Docker", "Maven",  "JUnit", "Mockito"].map((tech) => (
             <div key={tech} className="text-lg font-medium">
               {tech}
             </div>

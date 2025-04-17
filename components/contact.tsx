@@ -30,22 +30,40 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    })
-
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    })
-
-    setIsSubmitting(false)
+    try {
+      const form = e.target as HTMLFormElement
+      const formData = new FormData(form)
+      
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString()
+      })
+      
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        })
+        
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        })
+      } else {
+        throw new Error("Form submission failed")
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message. Please try again.",
+        variant: "destructive"
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -63,7 +81,25 @@ export default function Contact() {
           <div className="lg:col-span-2">
             <Card>
               <CardContent className="pt-6">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Add Netlify form attributes */}
+                <form 
+                  name="contact" 
+                  method="POST" 
+                  data-netlify="true" 
+                  netlify-honeypot="bot-field" 
+                  onSubmit={handleSubmit} 
+                  className="space-y-6"
+                >
+                  {/* Hidden input for Netlify */}
+                  <input type="hidden" name="form-name" value="contact" />
+                  
+                  {/* Honeypot field to prevent spam */}
+                  <div className="hidden">
+                    <label>
+                      Don't fill this out if you're human: <input name="bot-field" />
+                    </label>
+                  </div>
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label htmlFor="name" className="text-sm font-medium">
@@ -153,10 +189,10 @@ export default function Contact() {
                       <div>
                         <h4 className="font-medium">Email</h4>
                         <a
-                          href="mailto:alex@example.com"
+                          href="mailto:kaifmohammed037@gmail.com"
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
-                          alex@example.com
+                          kaifmohammed037@gmail.com
                         </a>
                       </div>
                     </div>
@@ -166,10 +202,10 @@ export default function Contact() {
                       <div>
                         <h4 className="font-medium">Phone</h4>
                         <a
-                          href="tel:+14155552671"
+                          href="tel:+918618948316"
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
-                          (415) 555-2671
+                          +91 8618948316
                         </a>
                       </div>
                     </div>
@@ -178,7 +214,7 @@ export default function Contact() {
                       <MapPin className="h-5 w-5 text-primary mr-3 mt-0.5" />
                       <div>
                         <h4 className="font-medium">Location</h4>
-                        <p className="text-muted-foreground">San Francisco, California</p>
+                        <p className="text-muted-foreground">Bangalore, Karnataka</p>
                       </div>
                     </div>
                   </div>
@@ -191,7 +227,7 @@ export default function Contact() {
                   </p>
                   <div className="flex space-x-3">
                     <Button variant="outline" size="icon" asChild>
-                      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                      <a href="https://github.com/MohammedKaif037" target="_blank" rel="noopener noreferrer">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
@@ -208,7 +244,7 @@ export default function Contact() {
                       </a>
                     </Button>
                     <Button variant="outline" size="icon" asChild>
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                      <a href="https://www.linkedin.com/in/mohammed-kaif-a7793923a/" target="_blank" rel="noopener noreferrer">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
@@ -253,4 +289,3 @@ export default function Contact() {
     </div>
   )
 }
-

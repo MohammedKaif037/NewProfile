@@ -13,13 +13,11 @@ export default function Skills() {
     { name: "React", level: 90 },
     { name: "Next.js", level: 80 },
     { name: "HTML/CSS", level: 85 },
-    { name: "Tailwind CSS", level: 80 },
-  ]
+   ]
 
   const backendSkills = [
     { name: "Node.js", level: 85 },
-    { name: "Express", level: 80 },
-    { name: "Python", level: 70 },
+     { name: "Python", level: 70 },
     { name: "Django", level: 65 },
     { name: "RESTful APIs", level: 85 },
     { name: "GraphQL", level: 70 },
@@ -29,7 +27,7 @@ export default function Skills() {
     { name: "MongoDB", level: 80 },
     { name: "PostgreSQL", level: 75 },
     { name: "MySQL", level: 70 },
-    { name: "Firebase", level: 75 },
+    { name: "Supabase", level: 75 },
     { name: "Redis", level: 60 },
   ]
 
@@ -143,7 +141,7 @@ export default function Skills() {
                   <li>VS Code</li>
                   <li>Postman</li>
                   <li>Jira</li>
-                  <li>Slack</li>
+                  <li>Confluence</li>
                 </ul>
               </CardContent>
             </Card>
