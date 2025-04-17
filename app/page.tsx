@@ -1,11 +1,9 @@
-import { ModeToggle } from "@/components/mode-toggle"
 import Hero from "@/components/hero"
 import About from "@/components/about"
 import Skills from "@/components/skills"
 import Projects from "@/components/projects"
 import Resume from "@/components/resume"
 import Education from "@/components/education"
-import Testimonials from "@/components/testimonials"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import Navigation from "@/components/navigation"
@@ -13,10 +11,6 @@ import Navigation from "@/components/navigation"
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      <div className="fixed top-4 right-4 z-50">
-        <ModeToggle />
-      </div>
-
       <Navigation />
 
       <main className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,9 +38,7 @@ export default function Home() {
           <Education />
         </section>
 
-        {/* <section id="testimonials" className="py-16">
-          <Testimonials />
-        </section> */}
+        
 
         <section id="contact" className="py-16">
           <Contact />
@@ -57,4 +49,3 @@ export default function Home() {
     </div>
   )
 }
-
