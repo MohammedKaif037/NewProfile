@@ -30,40 +30,22 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    try {
-      const form = e.target as HTMLFormElement
-      const formData = new FormData(form)
-      
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString()
-      })
-      
-      if (response.ok) {
-        toast({
-          title: "Message sent!",
-          description: "Thank you for your message. I'll get back to you soon.",
-        })
-        
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        })
-      } else {
-        throw new Error("Form submission failed")
-      }
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "There was a problem sending your message. Please try again.",
-        variant: "destructive"
-      })
-    } finally {
-      setIsSubmitting(false)
-    }
+    // Simulate form submission
+    await new Promise((resolve) => setTimeout(resolve, 1500))
+
+    toast({
+      title: "Message sent!",
+      description: "Thank you for your message. I'll get back to you soon.",
+    })
+
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    })
+
+    setIsSubmitting(false)
   }
 
   return (
@@ -81,25 +63,7 @@ export default function Contact() {
           <div className="lg:col-span-2">
             <Card>
               <CardContent className="pt-6">
-                {/* Add Netlify form attributes */}
-                <form 
-                  name="contact" 
-                  method="POST" 
-                  data-netlify="true" 
-                  netlify-honeypot="bot-field" 
-                  onSubmit={handleSubmit} 
-                  className="space-y-6"
-                >
-                  {/* Hidden input for Netlify */}
-                  <input type="hidden" name="form-name" value="contact" />
-                  
-                  {/* Honeypot field to prevent spam */}
-                  <div className="hidden">
-                    <label>
-                      Don't fill this out if you're human: <input name="bot-field" />
-                    </label>
-                  </div>
-
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label htmlFor="name" className="text-sm font-medium">
@@ -289,3 +253,4 @@ export default function Contact() {
     </div>
   )
 }
+
