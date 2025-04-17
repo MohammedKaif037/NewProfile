@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { useMediaQuery } from "@/hooks/use-media-query"
+import { ModeToggle } from "@/components/mode-toggle"
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -49,10 +50,12 @@ export default function Navigation() {
   const handleNavClick = (href: string) => {
     setIsOpen(false)
 
-    // Smooth scroll to section
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+    // Handle hash links with smooth scrolling
+    if (href.startsWith("#")) {
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
     }
   }
 
@@ -65,11 +68,11 @@ export default function Navigation() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <a href="#home" className="text-2xl font-bold text-primary">
-          Kaif<span className="text-primary">Portfolio</span>
+          Dev<span className="text-primary">Portfolio</span>
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-1">
+        <div className="hidden md:flex items-center space-x-1">
           {navItems.map((item) => (
             <Button
               key={item.name}
@@ -80,10 +83,13 @@ export default function Navigation() {
               {item.name}
             </Button>
           ))}
+          <div className="ml-2">
+            <ModeToggle />
+          </div>
         </div>
 
         {/* Mobile Navigation Toggle */}
-        <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <Button variant="ghost" size="icon" className="md:hidden z-50" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </Button>
       </div>
@@ -104,9 +110,11 @@ export default function Navigation() {
               {item.name}
             </Button>
           ))}
+          <div className="mt-4 flex justify-center">
+            <ModeToggle />
+          </div>
         </div>
       )}
     </nav>
   )
 }
-
