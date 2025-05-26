@@ -68,7 +68,7 @@ export default function Navigation() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <a href="#home" className="text-2xl font-bold text-primary">
-          Dev<span className="text-primary">Portfolio</span>
+          MohammedKaif<span className="text-primary">Portfolio</span>
         </a>
 
         {/* Desktop Navigation */}
