@@ -65,13 +65,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex justify-center"
         >
-          <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-primary/20">
-            <img
-              src="https://lh3.google.com/u/0/d/1J8tsM7xfHvUGRr6QG76qTfj5chbLbZit=w1366-h683-iv1?auditContext=prefetch"
-              alt="Mohammed Kaif"
-              className="object-cover w-full h-full"
-            />
-          </div>
+           
         </motion.div>
       </div>
 
