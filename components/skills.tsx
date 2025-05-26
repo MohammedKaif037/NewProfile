@@ -17,8 +17,8 @@ export default function Skills() {
 
   const backendSkills = [
     { name: "Node.js", level: 85 },
-     { name: "Python", level: 70 },
-    { name: "Django", level: 65 },
+     { name: "Java", level: 70 },
+    { name: "SpringBoot", level: 65 },
     { name: "RESTful APIs", level: 85 },
     { name: "GraphQL", level: 70 },
   ]
