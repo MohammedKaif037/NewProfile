@@ -67,7 +67,7 @@ export default function Hero() {
         >
           <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-primary/20">
             <img
-              src="/placeholder.svg?height=320&width=320"
+              src="https://lh3.google.com/u/0/d/1J8tsM7xfHvUGRr6QG76qTfj5chbLbZit=w1366-h683-iv1?auditContext=prefetch"
               alt="Mohammed Kaif"
               className="object-cover w-full h-full"
             />
