@@ -46,7 +46,7 @@
     "input-otp": "1.4.1",
     "lucide-react": "^0.454.0",
     "next": "15.1.0",
-    "next-themes": "latest",
+    "next-themes": "^0.2.1",
     "react": "^19",
     "react-day-picker": "8.10.1",
     "react-dom": "^19",
@@ -60,7 +60,7 @@
     "zod": "^3.24.1",
     "@emotion/is-prop-valid": "latest",
     "framer-motion": "latest"
-   },
+  },
   "devDependencies": {
     "@types/node": "^22",
     "@types/react": "^19",
