@@ -77,6 +77,32 @@ export default function Projects() {
         "Used computer vision libraries for mood detection, integrated third-party AR/3D tools, and optimized the frontend with lazy loading and efficient state management using Zustand.",
       technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Framer Motion", "Zustand", "Nodemailer", "PDFKit"]
     },
+    {
+  "id": 4,
+  "title": "AQI AI Dashboard",
+  "description": "A modern dashboard that visualizes real-time and historical Air Quality Index (AQI) data with AI-powered health insights and alerts.",
+  "image": "/placeholder.svg?height=400&width=600",
+  "tags": ["Next.js", "AI", "Tailwind CSS", "Supabase", "Chart.js"],
+  "github": "https://github.com/mohammedkaif037/aqi_ai ",
+  "demo": "https://aqi-ai-dashboard.vercel.app ",
+  "longDescription": "The AQI AI Dashboard is a Next.js-based web application designed to monitor, analyze, and visualize air quality data across Indian cities. It fetches current and historical AQI metrics using Supabase as the backend and provides users with detailed insights powered by AI. The app includes interactive line charts for trend visualization, comparison features between cities, notification management, and customizable user settings. With support for light/dark themes, responsive design, and Radix UI components, it delivers a smooth and accessible experience across all devices.",
+  "challenges": "Fetching accurate real-time AQI data from open APIs, simulating mock data when no data was available, integrating charting libraries with dynamic data, and implementing responsive navigation with collapsible sidebar logic.",
+  "solutions": "Used mock data generation based on realistic patterns when actual data wasn't available. Integrated Recharts for beautiful, responsive data visualization and used Radix UI and React hooks to manage state and theme switching. Built reusable UI components with TypeScript for maintainability.",
+  "technologies": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Radix UI",
+    "Recharts",
+    "Zod",
+    "React Hook Form",
+    "next-themes",
+    "Sonner",
+    "Lucide Icons",
+    "Supabase"
+  ]
+}
   ]
 
   // Calculate pagination
