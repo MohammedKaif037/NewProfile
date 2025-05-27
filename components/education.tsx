@@ -15,8 +15,8 @@ export default function Education() {
       description: "Graduated with a CGPA of 8.29. Studied core subjects including data structures, algorithms, database systems, and software engineering.",
       achievements: [
         "Completed final year project based on a real-time stock market solution.",
-        "Actively participated in tech fests and coding competitions.",
-        "Member of the college development club."
+        "Actively participated in tech fests and coding competitions."
+        // "Member of the college development club."
       ],
     },
     {
