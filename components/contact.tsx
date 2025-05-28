@@ -9,7 +9,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
-import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react"
+import { Phone, MapPin, Send, Loader2 } from "lucide-react"
+import Mail from "lucide-react/dist/esm/icons/mail"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
