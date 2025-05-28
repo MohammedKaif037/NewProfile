@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
 import { MailPlus, Phone, MapPin, Send, Loader2 } from "lucide-react"
+import { supabase } from "@/lib/supabase" // adjust to your path
 
 
 export default function Contact() {
@@ -26,28 +27,31 @@ export default function Contact() {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
+  
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+  setIsSubmitting(true)
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+  const { data, error } = await supabase.from("contact_messages").insert([formData])
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-
+  if (error) {
     toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
+      title: "Error sending message",
+      description: error.message,
     })
-
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    })
-
     setIsSubmitting(false)
+    return
   }
+
+  toast({
+    title: "Message sent!",
+    description: "Thank you for your message. I'll get back to you soon.",
+  })
+
+  // Reset form
+  setFormData({ name: "", email: "", subject: "", message: "" })
+  setIsSubmitting(false)
+}
 
   return (
     <div className="container mx-auto">
