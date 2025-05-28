@@ -51,9 +51,9 @@ export default function Hero() {
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
+              <a href="mailto:kaifmohammed037@gmail.com" target="_blank" rel="noopener noreferrer">
+                <Mail className="h-5 w-5" />
+                <span className="sr-only">Email</span>
               </a>
             </Button>
           </div>
