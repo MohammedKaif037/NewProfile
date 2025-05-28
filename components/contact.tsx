@@ -28,30 +28,49 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
   
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault()
-  setIsSubmitting(true)
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
 
-  const { data, error } = await supabase.from("contact_messages").insert([formData])
+    try {
+      // Option 1: Simple insert without specifying columns
+      const { data, error } = await supabase
+        .from("contact_messages")
+        .insert([formData])
 
-  if (error) {
-    toast({
-      title: "Error sending message",
-      description: error.message,
-    })
-    setIsSubmitting(false)
-    return
+      // Option 2: If you want to specify which columns to return after insert
+      // const { data, error } = await supabase
+      //   .from("contact_messages")
+      //   .insert([formData])
+      //   .select('id, name, email, subject, message')
+
+      if (error) {
+        console.error('Supabase error:', error)
+        toast({
+          title: "Error sending message",
+          description: error.message,
+        })
+        setIsSubmitting(false)
+        return
+      }
+
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      })
+
+      // Reset form
+      setFormData({ name: "", email: "", subject: "", message: "" })
+      setIsSubmitting(false)
+    } catch (err) {
+      console.error('Unexpected error:', err)
+      toast({
+        title: "Error sending message",
+        description: "An unexpected error occurred. Please try again.",
+      })
+      setIsSubmitting(false)
+    }
   }
-
-  toast({
-    title: "Message sent!",
-    description: "Thank you for your message. I'll get back to you soon.",
-  })
-
-  // Reset form
-  setFormData({ name: "", email: "", subject: "", message: "" })
-  setIsSubmitting(false)
-}
 
   return (
     <div className="container mx-auto">
