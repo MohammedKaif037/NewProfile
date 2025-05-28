@@ -60,7 +60,6 @@ export default function Projects() {
         "Used the ChatAnywhere API for AI integration, implemented robust activity tracking with Supabase, and adopted a clean, intuitive UI design using shadcn/ui components.",
       technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "ChatAnywhere API", "Vercel"]
     },
-    
     {
       id: 3,
       title: "VibeCart",
@@ -78,31 +77,31 @@ export default function Projects() {
       technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Framer Motion", "Zustand", "Nodemailer", "PDFKit"]
     },
     {
-  "id": 4,
-  "title": "AQI AI Dashboard",
-  "description": "A modern dashboard that visualizes real-time and historical Air Quality Index (AQI) data with AI-powered health insights and alerts.",
-  "image": "/placeholder.svg?height=400&width=600",
-  "tags": ["Next.js", "AI", "Tailwind CSS", "Supabase", "Chart.js"],
-  "github": "https://github.com/mohammedkaif037/aqi_ai ",
-  "demo": "https://aqi-ai-dashboard.vercel.app ",
-  "longDescription": "The AQI AI Dashboard is a Next.js-based web application designed to monitor, analyze, and visualize air quality data across Indian cities. It fetches current and historical AQI metrics using Supabase as the backend and provides users with detailed insights powered by AI. The app includes interactive line charts for trend visualization, comparison features between cities, notification management, and customizable user settings. With support for light/dark themes, responsive design, and Radix UI components, it delivers a smooth and accessible experience across all devices.",
-  "challenges": "Fetching accurate real-time AQI data from open APIs, simulating mock data when no data was available, integrating charting libraries with dynamic data, and implementing responsive navigation with collapsible sidebar logic.",
-  "solutions": "Used mock data generation based on realistic patterns when actual data wasn't available. Integrated Recharts for beautiful, responsive data visualization and used Radix UI and React hooks to manage state and theme switching. Built reusable UI components with TypeScript for maintainability.",
-  "technologies": [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "Radix UI",
-    "Recharts",
-    "Zod",
-    "React Hook Form",
-    "next-themes",
-    "Sonner",
-    "Lucide Icons",
-    "Supabase"
-  ]
-}
+      id: 4,
+      title: "AQI AI Dashboard",
+      description: "A modern dashboard that visualizes real-time and historical Air Quality Index (AQI) data with AI-powered health insights and alerts.",
+      image: "/placeholder.svg?height=400&width=600",
+      tags: ["Next.js", "AI", "Tailwind CSS", "Supabase", "Chart.js"],
+      github: "https://github.com/mohammedkaif037/aqi_ai",
+      demo: "https://aqi-ai-dashboard.vercel.app",
+      longDescription: "The AQI AI Dashboard is a Next.js-based web application designed to monitor, analyze, and visualize air quality data across Indian cities. It fetches current and historical AQI metrics using Supabase as the backend and provides users with detailed insights powered by AI. The app includes interactive line charts for trend visualization, comparison features between cities, notification management, and customizable user settings. With support for light/dark themes, responsive design, and Radix UI components, it delivers a smooth and accessible experience across all devices.",
+      challenges: "Fetching accurate real-time AQI data from open APIs, simulating mock data when no data was available, integrating charting libraries with dynamic data, and implementing responsive navigation with collapsible sidebar logic.",
+      solutions: "Used mock data generation based on realistic patterns when actual data wasn't available. Integrated Recharts for beautiful, responsive data visualization and used Radix UI and React hooks to manage state and theme switching. Built reusable UI components with TypeScript for maintainability.",
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI",
+        "Recharts",
+        "Zod",
+        "React Hook Form",
+        "next-themes",
+        "Sonner",
+        "Lucide Icons",
+        "Supabase"
+      ]
+    }
   ]
 
   // Calculate pagination
@@ -198,67 +197,84 @@ export default function Projects() {
         {/* Project Details Dialog */}
         <Dialog open={!!selectedProject} onOpenChange={(open) => !open && setSelectedProject(null)}>
           {selectedProject && (
-            <DialogContent className="max-w-3xl">
-              <DialogHeader>
-                <DialogTitle className="text-2xl">{selectedProject.title}</DialogTitle>
-                <DialogDescription className="flex flex-wrap gap-2 mt-2">
-                  {selectedProject.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary">
-                      {tag}
-                    </Badge>
-                  ))}
-                </DialogDescription>
-              </DialogHeader>
-
-              <div className="aspect-video overflow-hidden rounded-md mb-4">
-                <img
-                  src={selectedProject.image || "/placeholder.svg"}
-                  alt={selectedProject.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              <div className="space-y-4">
-                <div>
-                  <h4 className="text-lg font-semibold mb-2">Overview</h4>
-                  <p>{selectedProject.longDescription}</p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <h4 className="text-lg font-semibold mb-2">Challenges</h4>
-                    <p>{selectedProject.challenges}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold mb-2">Solutions</h4>
-                    <p>{selectedProject.solutions}</p>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="text-lg font-semibold mb-2">Technologies Used</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedProject.technologies.map((tech) => (
-                      <Badge key={tech} variant="outline">
-                        {tech}
+            <DialogContent className="max-w-4xl w-full h-[85vh] p-0 overflow-hidden">
+              <div className="h-full flex flex-col">
+                <DialogHeader className="flex-shrink-0 p-6 pb-4 border-b">
+                  <DialogTitle className="text-2xl">{selectedProject.title}</DialogTitle>
+                  <DialogDescription className="flex flex-wrap gap-2 mt-2">
+                    {selectedProject.tags.map((tag) => (
+                      <Badge key={tag} variant="secondary">
+                        {tag}
                       </Badge>
                     ))}
+                  </DialogDescription>
+                </DialogHeader>
+
+                {/* Scrollable Content Area */}
+                <div 
+                  className="flex-1 overflow-y-scroll px-6 py-4"
+                  style={{ maxHeight: 'calc(85vh - 180px)' }}
+                >
+                  <div className="space-y-6">
+                    <div className="aspect-video overflow-hidden rounded-md">
+                      <img
+                        src={selectedProject.image || "/placeholder.svg"}
+                        alt={selectedProject.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    <div>
+                      <h4 className="text-lg font-semibold mb-3">Overview</h4>
+                      <p className="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                        {selectedProject.longDescription}
+                      </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="text-lg font-semibold mb-3">Challenges</h4>
+                        <p className="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                          {selectedProject.challenges}
+                        </p>
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold mb-3">Solutions</h4>
+                        <p className="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                          {selectedProject.solutions}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="text-lg font-semibold mb-3">Technologies Used</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {selectedProject.technologies.map((tech) => (
+                          <Badge key={tech} variant="outline">
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex justify-between pt-4">
-                  <Button asChild>
-                    <a href={selectedProject.demo} target="_blank" rel="noopener noreferrer">
-                      View Live Demo
-                      <ExternalLink className="ml-2 h-4 w-4" />
-                    </a>
-                  </Button>
-                  <Button variant="outline" asChild>
-                    <a href={selectedProject.github} target="_blank" rel="noopener noreferrer">
-                      View Source Code
-                      <Github className="ml-2 h-4 w-4" />
-                    </a>
-                  </Button>
+                {/* Fixed Footer */}
+                <div className="flex-shrink-0 border-t p-6">
+                  <div className="flex justify-between">
+                    <Button asChild>
+                      <a href={selectedProject.demo} target="_blank" rel="noopener noreferrer">
+                        View Live Demo
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
+                    <Button variant="outline" asChild>
+                      <a href={selectedProject.github} target="_blank" rel="noopener noreferrer">
+                        View Source Code
+                        <Github className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </DialogContent>
@@ -268,4 +284,3 @@ export default function Projects() {
     </div>
   )
 }
-
