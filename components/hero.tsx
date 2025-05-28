@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react"
 import { motion } from "framer-motion"
+import { MailPlus } from 'lucide-react';
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false)
@@ -52,7 +53,7 @@ export default function Hero() {
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <a href="mailto:kaifmohammed037@gmail.com" target="_blank" rel="noopener noreferrer">
-                <Mail className="h-5 w-5" />
+                <MailPlus className="h-5 w-5" />
                 <span className="sr-only">Email</span>
               </a>
             </Button>
