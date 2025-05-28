@@ -34,7 +34,7 @@ export default function Projects() {
       description: "A modern code snippet manager built with Next.js and Supabase.",
       image: "/public/logo.svg",
       tags: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
-      github: "https://github.com/yourusername/snippet-vault",
+      github: "https://github.com/MohammedKaif037/SnippetManager",
       demo: "https://snippet-vault.vercel.app",
       longDescription: 
         "SnippetVault is a feature-rich code snippet manager designed to help developers efficiently store, organize, and retrieve their code snippets. It offers a seamless user experience with advanced features like tag-based organization, powerful search capabilities, and light/dark mode support. The platform supports user authentication, allowing users to securely manage their snippets, mark favorites, archive old snippets, and sync data across devices. With its intuitive interface and robust functionality, SnippetVault caters to both casual coders and professional developers. The application also includes guest mode for users who want to try the platform without creating an account. Built using Next.js, TypeScript, and Supabase, SnippetVault ensures scalability, security, and ease of use.",
@@ -50,7 +50,7 @@ export default function Projects() {
       description: "An AI-powered coding habit tracker to help developers build consistent coding habits.",
       image: "/placeholder.svg?height=200&width=200",
       tags: ["Next.js", "Supabase", "AI", "Tailwind CSS"],
-      github: "https://github.com/yourusername/codepulse",
+      github: "https://github.com/MohammedKaif037/CodePulse",
       demo: "https://codepulse-demo.vercel.app",
       longDescription: 
         "CodePulse is an innovative platform designed to help developers track their coding habits, monitor progress, and receive personalized guidance to improve their skills. The platform integrates AI-powered features such as a chat assistant, daily coding challenges, and personalized learning recommendations. Users can track their coding activity, view streak calendars, and analyze their progress through detailed charts and gamified XP systems. The onboarding process collects user preferences and goals, tailoring the experience to individual needs. CodePulse also includes task and project management tools, allowing users to organize their coding work effectively. With its sleek design and advanced functionality, CodePulse empowers developers to stay motivated and continuously grow their skills.",
@@ -66,7 +66,7 @@ export default function Projects() {
       description: "A mood-based e-commerce platform that recommends products tailored to how you're feeling.",
       image: "/placeholder.svg?height=400&width=600",
       tags: ["Next.js", "Supabase", "AI", "Tailwind CSS"],
-      github: "https://github.com/yourusername/vibecart",
+      github: "https://github.com/MohammedKaif037/Ehchance-Store",
       demo: "https://vibecart-demo.vercel.app",
       longDescription: 
         "VibeCart is a cutting-edge e-commerce platform that revolutionizes the shopping experience by aligning product recommendations with the user's current mood. Using AI-powered mood detection (via facial expressions or interactive quizzes), VibeCart curates personalized product suggestions that enhance or complement the user's emotional state. The platform includes advanced features like mood analytics, product reviews with emoji reactions, and a 3D/AR product viewer. Users can manage their shopping carts, track orders, generate invoices, and even subscribe to receive mood-based products regularly. With a fully responsive design, VibeCart ensures a seamless shopping experience across desktops, tablets, and mobile devices. The platform combines the power of AI, e-commerce, and modern web technologies to create a truly unique and engaging shopping journey.",
@@ -82,7 +82,7 @@ export default function Projects() {
       description: "A modern dashboard that visualizes real-time and historical Air Quality Index (AQI) data with AI-powered health insights and alerts.",
       image: "/placeholder.svg?height=400&width=600",
       tags: ["Next.js", "AI", "Tailwind CSS", "Supabase", "Chart.js"],
-      github: "https://github.com/mohammedkaif037/aqi_ai",
+      github: "https://github.com/MohammedKaif037/aqi_ai",
       demo: "https://aqi-ai-dashboard.vercel.app",
       longDescription: "The AQI AI Dashboard is a Next.js-based web application designed to monitor, analyze, and visualize air quality data across Indian cities. It fetches current and historical AQI metrics using Supabase as the backend and provides users with detailed insights powered by AI. The app includes interactive line charts for trend visualization, comparison features between cities, notification management, and customizable user settings. With support for light/dark themes, responsive design, and Radix UI components, it delivers a smooth and accessible experience across all devices.",
       challenges: "Fetching accurate real-time AQI data from open APIs, simulating mock data when no data was available, integrating charting libraries with dynamic data, and implementing responsive navigation with collapsible sidebar logic.",
@@ -154,12 +154,12 @@ export default function Projects() {
                         <span className="sr-only">GitHub</span>
                       </a>
                     </Button>
-                    <Button variant="outline" size="icon" asChild>
+{/*                     <Button variant="outline" size="icon" asChild>
                       <a href={project.demo} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4" />
                         <span className="sr-only">Live Demo</span>
                       </a>
-                    </Button>
+                    </Button> */}
                   </div>
                 </CardFooter>
               </Card>
@@ -262,12 +262,12 @@ export default function Projects() {
                 {/* Fixed Footer */}
                 <div className="flex-shrink-0 border-t p-6">
                   <div className="flex justify-between">
-                    <Button asChild>
+{/*                     <Button asChild>
                       <a href={selectedProject.demo} target="_blank" rel="noopener noreferrer">
                         View Live Demo
                         <ExternalLink className="ml-2 h-4 w-4" />
                       </a>
-                    </Button>
+                    </Button> */}
                     <Button variant="outline" asChild>
                       <a href={selectedProject.github} target="_blank" rel="noopener noreferrer">
                         View Source Code
