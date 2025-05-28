@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
-import { Phone, MapPin, Send, Loader2 } from "lucide-react"
-import Mail from "lucide-react/dist/esm/icons/mail"
+import { MailPlus, Phone, MapPin, Send, Loader2 } from "lucide-react"
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -150,7 +150,7 @@ export default function Contact() {
 
                   <div className="space-y-6">
                     <div className="flex items-start">
-                      <Mail className="h-5 w-5 text-primary mr-3 mt-0.5" />
+                      <MailPlus className="h-5 w-5 text-primary mr-3 mt-0.5" />
                       <div>
                         <h4 className="font-medium">Email</h4>
                         <a
