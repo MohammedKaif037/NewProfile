@@ -36,7 +36,7 @@ export default function Contact() {
       // Option 1: Simple insert without specifying columns
       const { data, error } = await supabase
         .from("contact_messages")
-        .insert([formData])
+        .insert(formData)
 
       // Option 2: If you want to specify which columns to return after insert
       // const { data, error } = await supabase
