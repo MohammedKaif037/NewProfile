@@ -128,15 +128,21 @@ export default function Resume() {
         transition={{ duration: 0.5 }}
       >
         <div className="flex justify-between items-center mb-8">
-          <div>
-            <h2 className="text-3xl font-bold mb-2">Resume</h2>
-            <div className="w-20 h-1 bg-primary"></div>
-          </div>
-          <Button className="flex items-center gap-2">
+        <div>
+          <h2 className="text-3xl font-bold mb-2">Resume</h2>
+          <div className="w-20 h-1 bg-primary"></div>
+        </div>
+        <Button asChild className="flex items-center gap-2">
+          <a
+            href="https://drive.google.com/file/d/1DgwHW0MHekJEMHvB-E-F8OvXlUY2hjMo/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Download className="h-4 w-4" />
             Download CV
-          </Button>
-        </div>
+          </a>
+        </Button>
+      </div>
 
         <Tabs defaultValue="experience" className="w-full">
           <TabsList className="grid w-full grid-cols-2 mb-8">
