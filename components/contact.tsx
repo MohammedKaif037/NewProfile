@@ -27,50 +27,41 @@ export default function Contact() {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
+    
   
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    try {
-      // Option 1: Simple insert without specifying columns
-      const { data, error } = await supabase
-        .from("contact_messages")
-        .insert(formData)
+  try {
+    const response = await fetch('https://formsubmit.co/el/licifi', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
 
-      // Option 2: If you want to specify which columns to return after insert
-      // const { data, error } = await supabase
-      //   .from("contact_messages")
-      //   .insert([formData])
-      //   .select('id, name, email, subject, message')
-
-      if (error) {
-        console.error('Supabase error:', error)
-        toast({
-          title: "Error sending message",
-          description: error.message,
-        })
-        setIsSubmitting(false)
-        return
-      }
-
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      })
-
-      // Reset form
-      setFormData({ name: "", email: "", subject: "", message: "" })
-      setIsSubmitting(false)
-    } catch (err) {
-      console.error('Unexpected error:', err)
-      toast({
-        title: "Error sending message",
-        description: "An unexpected error occurred. Please try again.",
-      })
-      setIsSubmitting(false)
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message || "Failed to send message.");
     }
+
+    toast({
+      title: "Message sent!",
+      description: "Thank you for your message. I'll get back to you soon.",
+    });
+
+    setFormData({ name: "", email: "", subject: "", message: "" });
+  } catch (err: any) {
+    console.error('FormSubmit error:', err);
+    toast({
+      title: "Error sending message",
+      description: err.message || "An unexpected error occurred. Please try again.",
+    });
+  } finally {
+    setIsSubmitting(false);
   }
+};
+
 
   return (
     <div className="container mx-auto">
