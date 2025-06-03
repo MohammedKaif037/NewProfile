@@ -64,7 +64,7 @@ export default function Projects() {
       id: 3,
       title: "VibeCart",
       description: "A mood-based e-commerce platform that recommends products tailored to how you're feeling.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/image.png",
       tags: ["Next.js", "Supabase", "AI", "Tailwind CSS"],
       github: "https://github.com/MohammedKaif037/Ehchance-Store",
       demo: "https://vibecart-demo.vercel.app",
