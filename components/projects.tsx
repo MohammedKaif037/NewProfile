@@ -32,7 +32,7 @@ export default function Projects() {
       id: 1,
       title: "SnippetVault",
       description: "A modern code snippet manager built with Next.js and Supabase.",
-      image: "/public/logo.svg",
+      image: "/public/snippet.png",
       tags: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
       github: "https://github.com/MohammedKaif037/SnippetManager",
       demo: "https://snippet-vault.vercel.app",
@@ -80,7 +80,7 @@ export default function Projects() {
       id: 4,
       title: "AQI AI Dashboard",
       description: "A modern dashboard that visualizes real-time and historical Air Quality Index (AQI) data with AI-powered health insights and alerts.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/public/AQI.png",
       tags: ["Next.js", "AI", "Tailwind CSS", "Supabase", "Chart.js"],
       github: "https://github.com/MohammedKaif037/aqi_ai",
       demo: "https://aqi-ai-dashboard.vercel.app",
@@ -101,7 +101,30 @@ export default function Projects() {
         "Lucide Icons",
         "Supabase"
       ]
-    }
+    },
+    {
+  id: 5,
+  title: "APInspect: API Testing Tool",
+  description: "A comprehensive API testing tool designed to help developers test, debug, and document their APIs with a user-friendly interface for HTTP requests and response management.",
+  image: "/public/APInspect.png",
+  tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Shadcn UI"],
+  github: "https://github.com/MohammedKaif037/APIInspect/tree/main/apinspect%20(1)",
+  demo: "https://apinspect-demo.vercel.app",
+  longDescription: "APInspect is a full-featured API testing tool built with Next.js and TypeScript that provides developers with everything needed to test, debug, and document APIs. The application features a comprehensive HTTP request builder supporting all methods, an advanced response viewer with JSON formatting, environment variables management for different deployment stages, request collections and history tracking, multiple authentication methods (Basic, Bearer, API Key, OAuth), test scripts for response validation, and code snippet generation in multiple programming languages. With its modular architecture and local storage persistence, APInspect offers a seamless experience for API development workflows.",
+  challenges: "Building a complex state management system for multiple interconnected features, implementing robust environment variable substitution across all request components, creating a flexible authentication system supporting multiple methods, and designing an intuitive test interface for response validation.",
+  solutions: "Implemented unidirectional data flow with centralized state management in the root component. Created utility functions for environment variable processing and form data handling. Built modular components with clear separation of concerns and used local storage utilities for data persistence. Integrated Shadcn UI components for consistent design and user experience.",
+  technologies: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Shadcn UI",
+    "Fetch API",
+    "Local Storage API",
+    "JavaScript",
+    "OAuth 2.0"
+  ]
+}
   ]
 
   // Calculate pagination
