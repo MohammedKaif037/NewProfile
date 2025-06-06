@@ -48,7 +48,7 @@ export default function Projects() {
       id: 2,
       title: "CodePulse",
       description: "An AI-powered coding habit tracker to help developers build consistent coding habits.",
-      image: "/placeholder.svg?height=200&width=200",
+      image: "/CodePulse.png",
       tags: ["Next.js", "Supabase", "AI", "Tailwind CSS"],
       github: "https://github.com/MohammedKaif037/CodePulse",
       demo: "https://codepulse-demo.vercel.app",
