@@ -12,7 +12,7 @@ export default function Resume() {
       id: 1,
       title: "Java Developer",
       company: "AIROBOSOFT Products and Services LLP",
-      location: "Remote",
+      location: "Onsite",
       period: "Nov 2022 - Mar 2025",
       description: [
         "Developed and optimized RESTful APIs using Spring Boot, enhancing performance by 25%.",
