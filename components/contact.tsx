@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
@@ -10,8 +9,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
 import { MailPlus, Phone, MapPin, Send, Loader2 } from "lucide-react"
-import { supabase } from "@/lib/supabase" // adjust to your path
-
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -27,132 +24,48 @@ export default function Contact() {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
+
+  const encode = (data: Record<string, string>) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
     
   const handleSubmit = async (e: React.FormEvent) => {
-
-
-
     e.preventDefault()
-
-
     setIsSubmitting(true)
 
-
-
-
     try {
-
-
-      // Option 1: Simple insert without specifying columns
-
-
-      const { data, error } = await supabase
-
-
-        .from("contact_messages")
-
-
-        .insert(formData)
-
-
-
-
-
-      // Option 2: If you want to specify which columns to return after insert
-
-
-      // const { data, error } = await supabase
-
-
-      //   .from("contact_messages")
-
-
-      //   .insert([formData])
-
-
-      //   .select('id, name, email, subject, message')
-
-
-
-
-
-      if (error) {
-
-
-        console.error('Supabase error:', error)
-
-
-        toast({
-
-
-          title: "Error sending message",
-
-
-          description: error.message,
-
-
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": "contact",
+          ...formData
         })
+      })
 
-
-        setIsSubmitting(false)
-
-
-        return
-
-
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        })
+        // Reset form
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      } else {
+        throw new Error('Failed to send message')
       }
-
-
-
-
+    } catch (error) {
+      console.error('Error:', error)
       toast({
-
-
-        title: "Message sent!",
-
-
-        description: "Thank you for your message. I'll get back to you soon.",
-
-
-      })
-
-
-
-
-      // Reset form
-
-
-      setFormData({ name: "", email: "", subject: "", message: "" })
-
-
-      setIsSubmitting(false)
-
-
-    } catch (err) {
-
-
-      console.error('Unexpected error:', err)
-
-
-      toast({
-
-
         title: "Error sending message",
-
-
-        description: "An unexpected error occurred. Please try again.",
-
-
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
       })
-
-
+    } finally {
       setIsSubmitting(false)
-
-
     }
-
   }
-
 
   return (
     <div className="container mx-auto">
@@ -169,7 +82,23 @@ export default function Contact() {
           <div className="lg:col-span-2">
             <Card>
               <CardContent className="pt-6">
+                {/* Hidden form for Netlify to detect at build time */}
+                <form 
+                  name="contact" 
+                  netlify 
+                  netlify-honeypot="bot-field" 
+                  hidden
+                >
+                  <input type="text" name="name" />
+                  <input type="email" name="email" />
+                  <input type="text" name="subject" />
+                  <textarea name="message"></textarea>
+                </form>
+
+                {/* Actual form that users interact with */}
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  <input type="hidden" name="form-name" value="contact" />
+                  
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label htmlFor="name" className="text-sm font-medium">
