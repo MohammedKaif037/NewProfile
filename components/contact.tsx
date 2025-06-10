@@ -85,8 +85,9 @@ export default function Contact() {
                 {/* Hidden form for Netlify to detect at build time */}
                 <form 
                   name="contact" 
-                  netlify 
-                  netlify-honeypot="bot-field" 
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field" 
                   hidden
                 >
                   <input type="text" name="name" />
@@ -96,7 +97,7 @@ export default function Contact() {
                 </form>
 
                 {/* Actual form that users interact with */}
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6" name="contact" method="POST">
                   <input type="hidden" name="form-name" value="contact" />
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
