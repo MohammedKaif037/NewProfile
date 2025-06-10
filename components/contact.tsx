@@ -36,7 +36,8 @@ export default function Contact() {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch("/", {
+      // Submit to the static HTML file for Netlify Forms detection
+      const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
@@ -82,22 +83,8 @@ export default function Contact() {
           <div className="lg:col-span-2">
             <Card>
               <CardContent className="pt-6">
-                {/* Hidden form for Netlify to detect at build time */}
-                <form 
-                  name="contact" 
-                  method="POST"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field" 
-                  hidden
-                >
-                  <input type="text" name="name" />
-                  <input type="email" name="email" />
-                  <input type="text" name="subject" />
-                  <textarea name="message"></textarea>
-                </form>
-
                 {/* Actual form that users interact with */}
-                <form onSubmit={handleSubmit} className="space-y-6" name="contact" method="POST">
+                <form onSubmit={handleSubmit} className="space-y-6" name="contact">
                   <input type="hidden" name="form-name" value="contact" />
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
