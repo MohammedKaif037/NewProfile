@@ -124,7 +124,24 @@ export default function Projects() {
     "JavaScript",
     "OAuth 2.0"
   ]
+},
+    {
+  id: 6,
+  title: "Air Quality Analysis – Indian Cities",
+  description: "A comprehensive data-science project that analyzes June 2025 air-quality readings across major Indian cities and highlights health-critical insights.",
+  image: "/air_quality.png",
+  tags: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
+  github: "https://github.com/MohammedKaif037/air-quality-analysis",
+  demo: "https://colab.research.google.com/drive/1l_6ecXpWNx9PuRTATCCwWIlL8-ZAyWRu",
+  longDescription:
+    "This project ingests raw pollutant data (PM2.5, NO2, SO2, etc.) and transforms it into an analytical dataset using robust preprocessing in Pandas. It then performs statistical exploration, correlation studies, and city-level ranking to identify the most polluted regions. Interactive visualizations—bar charts, scatter plots with regression lines, heatmaps, and box plots—make complex findings easily digestible for both technical and non-technical stakeholders. The notebook concludes with a concise, auto-generated summary report and actionable public-health recommendations.",
+  challenges:
+    "Handling missing values and non-numeric entries, pivoting a multi-index dataset for analysis, crafting clear visual insights within the constraints of a single Jupyter notebook, and ensuring interpretability for non-data-scientists.",
+  solutions:
+    "Implemented robust data-cleaning pipelines, leveraged pivot tables to restructure the dataset, used correlation matrices and category mapping to surface hidden relationships, and annotated visualizations with WHO guidelines and context to improve clarity.",
+  technologies: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter/Colab"]
 }
+
   ]
 
   // Calculate pagination
