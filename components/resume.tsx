@@ -36,20 +36,21 @@ export default function Resume() {
         "Gained hands-on experience in deploying Django apps and working in version-controlled environments using Git."
       ],
     },
-    {
+   {
   id: 3,
-  title: "AIML with Data Science Intern",
+  title: "Data Science & Analytics Intern",
   company: "Ybi Foundation",
   location: "Remote",
   period: "Apr 2025 - Jun 2025",
   description: [
-    "Completed a 2-month internship focused on Machine Learning and Data Science.",
-    "Explored core concepts including supervised and unsupervised learning, regression, and classification models.",
-    "Worked with Python libraries such as Pandas, NumPy, Matplotlib, and Scikit-learn for data analysis and model building.",
-    "Implemented real-world projects involving data preprocessing, visualization, and machine learning pipelines.",
-    "Collaborated remotely in a professional environment while gaining practical exposure to AI/ML workflows and tools."
+    "Conducted end-to-end exploratory data analysis (EDA) on large, multi-source datasets—cleaning, normalizing, and visualizing 100 K+ records to surface hidden trends and anomalies.",
+    "Built interactive dashboards and detailed visual reports in Jupyter using Pandas, Matplotlib/Seaborn, and Plotly, enabling non-technical stakeholders to track air-quality and sales KPIs in real time.",
+    "Applied statistical methods (correlation studies, hypothesis testing, A/B-style comparisons) to validate assumptions and transform raw findings into actionable business recommendations.",
+    "Automated data-pipeline scripts that reduced manual preprocessing time by 40 %, leveraging NumPy vectorization and scheduled notebook jobs on GitHub Actions.",
+    "Documented insights and presented data-driven storyboards to cross-functional teams, directly influencing project prioritization and resource allocation."
   ],
-},
+}
+
 
   ]
 
