@@ -131,7 +131,7 @@ export default function Projects() {
   description: "A comprehensive data-science project that analyzes June 2025 air-quality readings across major Indian cities and highlights health-critical insights.",
   image: "/air_quality.png",
   tags: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
-  github: "https://github.com/MohammedKaif037/air-quality-analysis",
+  github: "https://github.com/MohammedKaif037/air-quality-analysis-india",
   demo: "https://colab.research.google.com/drive/1l_6ecXpWNx9PuRTATCCwWIlL8-ZAyWRu",
   longDescription:
     "This project ingests raw pollutant data (PM2.5, NO2, SO2, etc.) and transforms it into an analytical dataset using robust preprocessing in Pandas. It then performs statistical exploration, correlation studies, and city-level ranking to identify the most polluted regions. Interactive visualizations—bar charts, scatter plots with regression lines, heatmaps, and box plots—make complex findings easily digestible for both technical and non-technical stakeholders. The notebook concludes with a concise, auto-generated summary report and actionable public-health recommendations.",
