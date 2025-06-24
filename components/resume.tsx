@@ -36,6 +36,21 @@ export default function Resume() {
         "Gained hands-on experience in deploying Django apps and working in version-controlled environments using Git."
       ],
     },
+    {
+  id: 3,
+  title: "AIML with Data Science Intern",
+  company: "Ybi Foundation",
+  location: "Remote",
+  period: "Apr 2025 - Jun 2025",
+  description: [
+    "Completed a 2-month internship focused on Machine Learning and Data Science.",
+    "Explored core concepts including supervised and unsupervised learning, regression, and classification models.",
+    "Worked with Python libraries such as Pandas, NumPy, Matplotlib, and Scikit-learn for data analysis and model building.",
+    "Implemented real-world projects involving data preprocessing, visualization, and machine learning pipelines.",
+    "Collaborated remotely in a professional environment while gaining practical exposure to AI/ML workflows and tools."
+  ],
+},
+
   ]
 
   const certifications = [
