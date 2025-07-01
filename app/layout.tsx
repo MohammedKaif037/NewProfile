@@ -6,7 +6,11 @@ export const metadata: Metadata = {
   title: 'Mohammed Kaif Profile',
   description: 'Created with NextJS',
   generator: 'Developer',
+  icons: {
+    icon: '/MK.png', // this points to the file in the public/ folder
+  },
 }
+
 
 export default function RootLayout({
   children,
