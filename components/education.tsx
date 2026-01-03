@@ -6,66 +6,66 @@ import { GraduationCap, Calendar, MapPin, Award } from "lucide-react"
 
 export default function Education() {
   const education = [
-    {
-      id: 1,
-      degree: "Bachelor of Engineering (B.E.) in Information Science and Engineering",
-      institution: "VTU",
-      location: "Karnataka",
-      period: "2019 - 2023",
-      description: "Graduated with a CGPA of 8.29. Studied core subjects including data structures, algorithms, database systems, and software engineering.",
-      achievements: [
-        "Completed final year project based on a real-time stock market solution.",
-        "Actively participated in tech fests and coding competitions."
-        // "Member of the college development club."
-      ],
-    },
-    {
-      id: 2,
-      degree: "Pre-University Course (PUC) in PCMB",
-      institution: "Williams International PU College",
-      location: "Bangalore, Karnataka",
-      period: "2017 - 2019",
-      description: "Studied Physics, Chemistry, Mathematics, and Biology (PCMB).",
-      achievements: [
-        "Star Student Award",
-        "Science Fest Award",
-        "Good at Academics Award"
-      ],
-    },
-    {
-      id: 3,
-      degree: "Webinars & Online Sessions",
-      institution: "CIET",
-      location: "Remote",
-      period: "2022 - 2023",
-      description: "Attended webinars to enhance knowledge in cutting-edge technologies and soft skills.",
-      achievements: [
-        "5G Communication – Explored future trends and impact on industries",
-        "Photonic Quantum Computers – Introduction to quantum optics and computation",
-        "Value of Soft Skills – Insights into workplace communication and personal development",
-        "National Educational Policy – Understanding reforms in India’s education landscape",
-        "Augmented & Virtual Reality – Learning about immersive technologies and applications"
-      ],
-    },
-    {
-  id: 4,
-  degree: "Google Data Analytics Professional Certificate",
-  institution: "Google via Coursera",
-  location: "Remote",
-  period: "2024 - 2025",
-  description: "Completed comprehensive data analytics training covering the full data lifecycle - from collection and processing to analysis and visualization using tools like SQL, R, and Tableau.",
-  achievements: [
-    "Foundations: Data, Data, Everywhere",
-    "Ask Questions to Make Data-Driven Decisions",
-    "Prepare Data for Exploration",
-    "Process Data from Dirty to Clean",
-    "Analyze Data to Answer Questions",
-    "Share Data Through the Art of Visualization",
-    "Data Analysis with R Programming",
-    "Google Data Analytics Capstone: Complete a Case Study"
-  ],
-},
-  ];
+  {
+    id: 1, // Google Professional Certificate (Most Recent)
+    degree: "Google Data Analytics Professional Certificate",
+    institution: "Google via Coursera",
+    location: "Remote",
+    period: "2024 - 2025",
+    description: "Completed comprehensive data analytics training covering the full data lifecycle - from collection and processing to analysis and visualization using tools like SQL, R, and Tableau.",
+    achievements: [
+      "Foundations: Data, Data, Everywhere",
+      "Ask Questions to Make Data-Driven Decisions",
+      "Prepare Data for Exploration",
+      "Process Data from Dirty to Clean",
+      "Analyze Data to Answer Questions",
+      "Share Data Through the Art of Visualization",
+      "Data Analysis with R Programming",
+      "Google Data Analytics Capstone: Complete a Case Study"
+    ],
+  },
+  {
+    id: 2, // B.E. Degree
+    degree: "Bachelor of Engineering (B.E.) in Information Science and Engineering",
+    institution: "VTU",
+    location: "Karnataka",
+    period: "2019 - 2023",
+    description: "Graduated with a CGPA of 8.29. Studied core subjects including data structures, algorithms, database systems, and software engineering.",
+    achievements: [
+      "Completed final year project based on a real-time stock market solution.",
+      "Actively participated in tech fests and coding competitions."
+      // "Member of the college development club."
+    ],
+  },
+  {
+    id: 3, // Specialized Training
+    degree: "Webinars & Online Sessions",
+    institution: "CIET",
+    location: "Remote",
+    period: "2022 - 2023",
+    description: "Attended webinars to enhance knowledge in cutting-edge technologies and soft skills.",
+    achievements: [
+      "5G Communication – Explored future trends and impact on industries",
+      "Photonic Quantum Computers – Introduction to quantum optics and computation",
+      "Value of Soft Skills – Insights into workplace communication and personal development",
+      "National Educational Policy – Understanding reforms in India’s education landscape",
+      "Augmented & Virtual Reality – Learning about immersive technologies and applications"
+    ],
+  },
+  {
+    id: 4, // Schooling
+    degree: "Pre-University Course (PUC) in PCMB",
+    institution: "Williams International PU College",
+    location: "Bangalore, Karnataka",
+    period: "2017 - 2019",
+    description: "Studied Physics, Chemistry, Mathematics, and Biology (PCMB).",
+    achievements: [
+      "Star Student Award",
+      "Science Fest Award",
+      "Good at Academics Award"
+    ],
+  },
+];
   
 
   const courses = [
