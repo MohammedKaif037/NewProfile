@@ -150,7 +150,7 @@ export default function Resume() {
         </div>
         <Button asChild className="flex items-center gap-2">
           <a
-            href="https://drive.google.com/file/d/1DgwHW0MHekJEMHvB-E-F8OvXlUY2hjMo/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1NXzPfw3eia3WKJ77JKJim8uzheOIIn7g/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
