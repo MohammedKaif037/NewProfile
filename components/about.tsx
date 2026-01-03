@@ -19,35 +19,33 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-2">
             <p className="text-lg mb-6">
-            I'm a dedicated Full-Stack Java Developer with over 2 years of experience in building web applications and backend services. My software development journey started during my computer science studies, and it has evolved into a strong passion for creating scalable, efficient solutions.
-            </p>
+I'm a dedicated Software Engineer with  2.5 years of experience in building scalable backend systems and data-driven applications. My software development journey started during my information science studies, and it has evolved into a strong passion for creating robust, high-performance solutions.</p>
 
             <p className="text-lg mb-6">
-            I specialize in building scalable, high-performance applications using Java and Spring Boot, complemented by modern JavaScript frameworks like React and Next.js. With a strong focus on backend development, I am committed to writing clean, maintainable code and continually expanding my expertise in emerging technologies.
+            I specialize in building enterprise-grade applications using Java and Spring Boot, with expertise in data processing, microservices architecture, and AI integration. With a strong focus on backend development and data engineering, I am committed to writing clean, maintainable code and continually expanding my expertise in machine learning and artificial intelligence.
             </p>
 
             <p className="text-lg mb-8">
-              When I'm not coding, you can find me hiking, reading tech blogs, or going through tech news.
-              I believe in continuous learning and sharing knowledge with the developer community.
+              When I'm not coding, you can find me exploring new AI frameworks, reading research papers, or experimenting with data analytics tools. I believe in continuous learning and sharing knowledge with the developer community.
             </p>
 
             <div className="flex flex-wrap gap-2 mb-8">
-              <Badge variant="outline" className="text-sm py-1">
-                Problem Solver
-              </Badge>
-              <Badge variant="outline" className="text-sm py-1">
-                Team Player
-              </Badge>
-              <Badge variant="outline" className="text-sm py-1">
-                Fast Learner
-              </Badge>
-              <Badge variant="outline" className="text-sm py-1">
-                Detail-Oriented
-              </Badge>
-              <Badge variant="outline" className="text-sm py-1">
-                Adaptable
-              </Badge>
-            </div>
+            <Badge variant="outline" className="text-sm py-1">
+              Backend Specialist
+            </Badge>
+            <Badge variant="outline" className="text-sm py-1">
+              Data Engineer
+            </Badge>
+            <Badge variant="outline" className="text-sm py-1">
+              AI Enthusiast
+            </Badge>
+            <Badge variant="outline" className="text-sm py-1">
+              Problem Solver
+            </Badge>
+            <Badge variant="outline" className="text-sm py-1">
+              Performance-Focused
+            </Badge>
+          </div>
           </div>
 
           <div>
