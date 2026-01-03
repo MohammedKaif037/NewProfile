@@ -4,16 +4,16 @@ import { motion } from "framer-motion"
 import { Progress } from "@/components/ui/progress"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Code, Server, Database, Cloud, Palette, Wrench } from "lucide-react"
+import { Code, Server, Database, Cloud, Brain, Wrench } from "lucide-react"
 
 export default function Skills() {
-  const frontendSkills = [
-    { name: "JavaScript", level: 90 },
-    { name: "TypeScript", level: 85 },
-    { name: "React", level: 90 },
-    { name: "Next.js", level: 80 },
-    { name: "HTML/CSS", level: 85 },
-   ]
+  const dataAISkills = [
+  { name: "R Programming", level: 75 },
+  { name: "Data Analysis", level: 80 },
+  { name: "Data Visualization", level: 75 },
+  { name: "Tableau", level: 70 },
+  { name: "Python (Data)", level: 65 },
+]
 
   const backendSkills = [
     { name: "Node.js", level: 85 },
@@ -65,15 +65,15 @@ export default function Skills() {
         <div className="w-20 h-1 bg-primary mb-8"></div>
 
         <Tabs defaultValue="frontend" className="w-full">
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-8">
-            <TabsTrigger value="frontend" className="flex items-center gap-2">
-              <Code className="h-4 w-4" /> Frontend
-            </TabsTrigger>
+          <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-8">             
             <TabsTrigger value="backend" className="flex items-center gap-2">
               <Server className="h-4 w-4" /> Backend
             </TabsTrigger>
             <TabsTrigger value="database" className="flex items-center gap-2">
               <Database className="h-4 w-4" /> Database
+            </TabsTrigger>
+            <TabsTrigger value="dataai" className="flex items-center gap-2">
+              <Brain className="h-4 w-4" /> Data & AI
             </TabsTrigger>
             <TabsTrigger value="devops" className="flex items-center gap-2">
               <Cloud className="h-4 w-4" /> DevOps
@@ -103,6 +103,13 @@ export default function Skills() {
               </CardContent>
             </Card>
           </TabsContent>
+          <TabsContent value="dataai">
+          <Card>
+            <CardContent className="pt-6">
+              <SkillList skills={dataAISkills} />
+            </CardContent>
+          </Card>
+        </TabsContent>
 
           <TabsContent value="devops">
             <Card>
@@ -117,19 +124,19 @@ export default function Skills() {
           <h3 className="text-xl font-semibold mb-6">Other Skills</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <Card className="bg-muted/50">
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <Palette className="h-5 w-5 text-primary" />
-                  <h4 className="text-lg font-medium">UI/UX</h4>
-                </div>
-                <ul className="space-y-2">
-                  <li>Figma</li>
-                  <li>Responsive Design</li>
-                  <li>Wireframing</li>
-                  <li>User Testing</li>
-                </ul>
-              </CardContent>
-            </Card>
+            <CardContent className="pt-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Brain className="h-5 w-5 text-primary" />
+                <h4 className="text-lg font-medium">Data & Analytics</h4>
+              </div>
+              <ul className="space-y-2">
+                <li>Google Data Analytics</li>
+                <li>Data Cleaning</li>
+                <li>Statistical Analysis</li>
+                <li>Data Visualization</li>
+              </ul>
+            </CardContent>
+          </Card>
 
             <Card className="bg-muted/50">
               <CardContent className="pt-6">
