@@ -47,17 +47,34 @@ export default function Education() {
         "Augmented & Virtual Reality – Learning about immersive technologies and applications"
       ],
     },
+    {
+  id: 4,
+  degree: "Google Data Analytics Professional Certificate",
+  institution: "Google via Coursera",
+  location: "Remote",
+  period: "2024 - 2025",
+  description: "Completed comprehensive data analytics training covering the full data lifecycle - from collection and processing to analysis and visualization using tools like SQL, R, and Tableau.",
+  achievements: [
+    "Foundations: Data, Data, Everywhere",
+    "Ask Questions to Make Data-Driven Decisions",
+    "Prepare Data for Exploration",
+    "Process Data from Dirty to Clean",
+    "Analyze Data to Answer Questions",
+    "Share Data Through the Art of Visualization",
+    "Data Analysis with R Programming",
+    "Google Data Analytics Capstone: Complete a Case Study"
+  ],
+},
   ];
   
 
   const courses = [
-    "Advanced JavaScript Concepts",
-    "React and Redux Masterclass",
-    "Node.js API Development",
-    "AWS for Developers",
-    "Data Structures and Algorithms",
-    "UI/UX Design Fundamentals",
-  ]
+  "Google Data Analytics Professional Certificate",
+  "Java Programming & Spring Framework",
+  "Data Structures and Algorithms",
+  "Machine Learning Fundamentals",
+  "SQL & Database Design",
+]
 
   return (
     <div className="container mx-auto">
