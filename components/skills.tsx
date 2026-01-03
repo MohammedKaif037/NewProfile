@@ -15,29 +15,29 @@ export default function Skills() {
   { name: "Python (Data)", level: 65 },
 ]
 
-  const backendSkills = [
-    { name: "Node.js", level: 85 },
-     { name: "Java", level: 70 },
-    { name: "SpringBoot", level: 65 },
-    { name: "RESTful APIs", level: 85 },
-    { name: "GraphQL", level: 70 },
-  ]
+ const backendSkills = [
+  { name: "Java", level: 85 },
+  { name: "Spring Boot", level: 80 },
+  { name: "Spring MVC", level: 75 },
+  { name: "RESTful APIs", level: 85 },
+  { name: "Microservices", level: 75 },
+]
 
-  const databaseSkills = [
-    { name: "MongoDB", level: 80 },
-    { name: "PostgreSQL", level: 75 },
-    { name: "MySQL", level: 70 },
-    { name: "Supabase", level: 75 },
-    { name: "Redis", level: 60 },
-  ]
+const databaseSkills = [
+  { name: "MySQL", level: 80 },
+  { name: "PostgreSQL", level: 75 },
+  { name: "MongoDB", level: 70 },
+  { name: "SQL", level: 85 },
+  { name: "Redis", level: 65 },
+]
 
-  const devopsSkills = [
-    { name: "Git/GitHub", level: 85 },
-    { name: "Docker", level: 70 },
-    { name: "AWS", level: 75 },
-    { name: "CI/CD", level: 70 },
-    { name: "Vercel", level: 80 },
-  ]
+const devopsSkills = [
+  { name: "Git/GitHub", level: 85 },
+  { name: "Docker", level: 70 },
+  { name: "AWS", level: 70 },
+  { name: "CI/CD", level: 70 },
+  { name: "Maven", level: 80 },
+]
 
   const SkillList = ({ skills }: { skills: { name: string; level: number }[] }) => (
     <div className="space-y-6">
