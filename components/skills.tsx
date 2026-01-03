@@ -79,15 +79,7 @@ export default function Skills() {
               <Cloud className="h-4 w-4" /> DevOps
             </TabsTrigger>
           </TabsList>
-
-          <TabsContent value="frontend">
-            <Card>
-              <CardContent className="pt-6">
-                <SkillList skills={frontendSkills} />
-              </CardContent>
-            </Card>
-          </TabsContent>
-
+          
           <TabsContent value="backend">
             <Card>
               <CardContent className="pt-6">
