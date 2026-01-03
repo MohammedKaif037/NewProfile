@@ -22,10 +22,9 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
             Hi, I'm <span className="text-primary">Mohammed kaif</span>
           </h1>
-          <h2 className="text-2xl sm:text-3xl font-medium text-muted-foreground mb-6">Full-Stack Java Developer</h2>
+          <h2 className="text-2xl sm:text-3xl font-medium text-muted-foreground mb-6">Software Engineer | Java & Data Analytics</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-md">
-          I build scalable web applications with a focus on Java, Spring Boot, and cloud solutions. With 2+ years of experience, I also work with React and Node.js to deliver full-stack solutions.
-          </p>
+  I build scalable backend systems and data-driven applications using Java, Spring Boot, and modern data analytics tools. With 2.5 years of experience, I specialize in enterprise solutions and data processing.          </p>
 
           <div className="flex flex-wrap gap-4 mb-8">
             <Button asChild size="lg">
