@@ -64,7 +64,7 @@ export default function Skills() {
         <h2 className="text-3xl font-bold mb-2">Skills</h2>
         <div className="w-20 h-1 bg-primary mb-8"></div>
 
-        <Tabs defaultValue="frontend" className="w-full">
+        <Tabs defaultValue="backend" className="w-full">
           <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-8">             
             <TabsTrigger value="backend" className="flex items-center gap-2">
               <Server className="h-4 w-4" /> Backend
