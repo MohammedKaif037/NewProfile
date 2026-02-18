@@ -77,31 +77,48 @@ export default function Projects() {
       technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Framer Motion", "Zustand", "Nodemailer", "PDFKit"]
     },
     {
-      id: 4,
-      title: "AQI AI Dashboard",
-      description: "A modern dashboard that visualizes real-time and historical Air Quality Index (AQI) data with AI-powered health insights and alerts.",
-      image: "/AQI.png",
-      tags: ["Next.js", "AI", "Tailwind CSS", "Supabase", "Chart.js"],
-      github: "https://github.com/MohammedKaif037/aqi_ai",
-      demo: "https://aqi-ai-dashboard.vercel.app",
-      longDescription: "The AQI AI Dashboard is a Next.js-based web application designed to monitor, analyze, and visualize air quality data across Indian cities. It fetches current and historical AQI metrics using Supabase as the backend and provides users with detailed insights powered by AI. The app includes interactive line charts for trend visualization, comparison features between cities, notification management, and customizable user settings. With support for light/dark themes, responsive design, and Radix UI components, it delivers a smooth and accessible experience across all devices.",
-      challenges: "Fetching accurate real-time AQI data from open APIs, simulating mock data when no data was available, integrating charting libraries with dynamic data, and implementing responsive navigation with collapsible sidebar logic.",
-      solutions: "Used mock data generation based on realistic patterns when actual data wasn't available. Integrated Recharts for beautiful, responsive data visualization and used Radix UI and React hooks to manage state and theme switching. Built reusable UI components with TypeScript for maintainability.",
-      technologies: [
-        "Next.js",
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Radix UI",
-        "Recharts",
-        "Zod",
-        "React Hook Form",
-        "next-themes",
-        "Sonner",
-        "Lucide Icons",
-        "Supabase"
-      ]
-    },
+  id: 4,
+  title: "News Article Classification using NLP",
+  description: "An NLP-powered system that automatically classifies news articles into categories using machine learning techniques.",
+  image: "/news-classification.png",
+  tags: ["Python", "NLTK", "scikit-learn", "NLP", "Machine Learning"],
+  github: "https://github.com/MohammedKaif037/NewsArticleNLP",
+  demo: "", // Add if you have a demo link
+  longDescription: 
+    "Developed a robust text classification system that automatically categorizes news articles into five distinct categories: Business, Entertainment, Politics, Sports, and Technology. The project implements and compares two popular text vectorization techniques - Bag of Words (BoW) and TF-IDF - combined with Multinomial Naive Bayes classifier. Using the BBC News dataset containing 2,225 articles, the system achieves impressive accuracy rates of 98% with BoW and 97% with TF-IDF. The application includes comprehensive text preprocessing using NLTK for tokenization, stopword removal, and text cleaning. The project demonstrates the practical application of NLP in media monitoring, content recommendation systems, and automated content organization. A custom prediction function allows users to input their own news text and get real-time category predictions from both trained models.",
+  challenges: 
+    "Handling noisy text data with varying article lengths, removing irrelevant stopwords without losing contextual meaning, and optimizing the vectorization process for large vocabulary sizes while maintaining model performance across both BoW and TF-IDF representations.",
+  solutions: 
+    "Implemented custom preprocessing pipeline using NLTK for consistent text cleaning, created a robust tokenization strategy that preserves important keywords while removing noise, and leveraged scikit-learn's efficient sparse matrix representations to handle high-dimensional feature spaces without memory issues. Used train-test splitting with random_state=42 for reproducible results.",
+  technologies: ["Python", "NLTK", "scikit-learn", "pandas", "NumPy", "Kaggle API", "Jupyter Notebook", "MultinomialNB", "CountVectorizer", "TfidfVectorizer"]
+},
+
+    // {
+    //   id: 4,
+    //   title: "AQI AI Dashboard",
+    //   description: "A modern dashboard that visualizes real-time and historical Air Quality Index (AQI) data with AI-powered health insights and alerts.",
+    //   image: "/AQI.png",
+    //   tags: ["Next.js", "AI", "Tailwind CSS", "Supabase", "Chart.js"],
+    //   github: "https://github.com/MohammedKaif037/aqi_ai",
+    //   demo: "https://aqi-ai-dashboard.vercel.app",
+    //   longDescription: "The AQI AI Dashboard is a Next.js-based web application designed to monitor, analyze, and visualize air quality data across Indian cities. It fetches current and historical AQI metrics using Supabase as the backend and provides users with detailed insights powered by AI. The app includes interactive line charts for trend visualization, comparison features between cities, notification management, and customizable user settings. With support for light/dark themes, responsive design, and Radix UI components, it delivers a smooth and accessible experience across all devices.",
+    //   challenges: "Fetching accurate real-time AQI data from open APIs, simulating mock data when no data was available, integrating charting libraries with dynamic data, and implementing responsive navigation with collapsible sidebar logic.",
+    //   solutions: "Used mock data generation based on realistic patterns when actual data wasn't available. Integrated Recharts for beautiful, responsive data visualization and used Radix UI and React hooks to manage state and theme switching. Built reusable UI components with TypeScript for maintainability.",
+    //   technologies: [
+    //     "Next.js",
+    //     "React",
+    //     "TypeScript",
+    //     "Tailwind CSS",
+    //     "Radix UI",
+    //     "Recharts",
+    //     "Zod",
+    //     "React Hook Form",
+    //     "next-themes",
+    //     "Sonner",
+    //     "Lucide Icons",
+    //     "Supabase"
+    //   ]
+    // },
     {
   id: 5,
   title: "APInspect: API Testing Tool",
@@ -140,24 +157,7 @@ export default function Projects() {
   solutions:
     "Implemented robust data-cleaning pipelines, leveraged pivot tables to restructure the dataset, used correlation matrices and category mapping to surface hidden relationships, and annotated visualizations with WHO guidelines and context to improve clarity.",
   technologies: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter/Colab"]
-},
-    {
-  id: 7,
-  title: "News Article Classification using NLP",
-  description: "An NLP-powered system that automatically classifies news articles into categories using machine learning techniques.",
-  image: "/news-classification.png",
-  tags: ["Python", "NLTK", "scikit-learn", "NLP", "Machine Learning"],
-  github: "https://github.com/MohammedKaif037/NewsArticleNLP",
-  demo: "", // Add if you have a demo link
-  longDescription: 
-    "Developed a robust text classification system that automatically categorizes news articles into five distinct categories: Business, Entertainment, Politics, Sports, and Technology. The project implements and compares two popular text vectorization techniques - Bag of Words (BoW) and TF-IDF - combined with Multinomial Naive Bayes classifier. Using the BBC News dataset containing 2,225 articles, the system achieves impressive accuracy rates of 98% with BoW and 97% with TF-IDF. The application includes comprehensive text preprocessing using NLTK for tokenization, stopword removal, and text cleaning. The project demonstrates the practical application of NLP in media monitoring, content recommendation systems, and automated content organization. A custom prediction function allows users to input their own news text and get real-time category predictions from both trained models.",
-  challenges: 
-    "Handling noisy text data with varying article lengths, removing irrelevant stopwords without losing contextual meaning, and optimizing the vectorization process for large vocabulary sizes while maintaining model performance across both BoW and TF-IDF representations.",
-  solutions: 
-    "Implemented custom preprocessing pipeline using NLTK for consistent text cleaning, created a robust tokenization strategy that preserves important keywords while removing noise, and leveraged scikit-learn's efficient sparse matrix representations to handle high-dimensional feature spaces without memory issues. Used train-test splitting with random_state=42 for reproducible results.",
-  technologies: ["Python", "NLTK", "scikit-learn", "pandas", "NumPy", "Kaggle API", "Jupyter Notebook", "MultinomialNB", "CountVectorizer", "TfidfVectorizer"]
 }
-
   ]
 
   // Calculate pagination
